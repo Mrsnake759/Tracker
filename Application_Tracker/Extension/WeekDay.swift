@@ -2,12 +2,12 @@
 //  WeekDay.swift
 //  Application_Tracker
 //
-//  Created by artem on 15.03.2024.
+//  Created by artem on 13.03.2024.
 //
 
 import Foundation
 
-enum WeekDay: Int {
+enum Weekday: Int {
     case monday = 2
     case tuesday = 3
     case wednesday = 4

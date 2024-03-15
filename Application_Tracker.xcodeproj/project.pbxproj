@@ -19,6 +19,15 @@
 		30F76A952BA4756B00FC3AFC /* TrackerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76A942BA4756B00FC3AFC /* TrackerCategory.swift */; };
 		30F76A992BA4758B00FC3AFC /* TrackerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76A982BA4758B00FC3AFC /* TrackerRecord.swift */; };
 		30F76A9B2BA476A000FC3AFC /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76A9A2BA476A000FC3AFC /* WeekDay.swift */; };
+		30F76AA82BA4C85400FC3AFC /* CreatingTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76AA72BA4C85400FC3AFC /* CreatingTracker.swift */; };
+		30F76AAA2BA4C9D700FC3AFC /* TrackerViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76AA92BA4C9D700FC3AFC /* TrackerViewControllerCell.swift */; };
+		30F76AAC2BA4C9E600FC3AFC /* TrackerViewControllerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76AAB2BA4C9E600FC3AFC /* TrackerViewControllerHeader.swift */; };
+		30F76AAE2BA4CA2D00FC3AFC /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76AAD2BA4CA2D00FC3AFC /* NewHabitViewController.swift */; };
+		30F76AB02BA4CA7000FC3AFC /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76AAF2BA4CA7000FC3AFC /* NewCategoryViewController.swift */; };
+		30F76AB22BA4CA8900FC3AFC /* NewSheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76AB12BA4CA8900FC3AFC /* NewSheduleViewController.swift */; };
+		30F76AB42BA4CAA800FC3AFC /* IrregularEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76AB32BA4CAA800FC3AFC /* IrregularEventViewController.swift */; };
+		30F76AB62BA4CAC800FC3AFC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76AB52BA4CAC800FC3AFC /* TableViewCell.swift */; };
+		30F76AB82BA4CADE00FC3AFC /* SheduleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F76AB72BA4CADE00FC3AFC /* SheduleViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +45,15 @@
 		30F76A942BA4756B00FC3AFC /* TrackerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCategory.swift; sourceTree = "<group>"; };
 		30F76A982BA4758B00FC3AFC /* TrackerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRecord.swift; sourceTree = "<group>"; };
 		30F76A9A2BA476A000FC3AFC /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
+		30F76AA72BA4C85400FC3AFC /* CreatingTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingTracker.swift; sourceTree = "<group>"; };
+		30F76AA92BA4C9D700FC3AFC /* TrackerViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewControllerCell.swift; sourceTree = "<group>"; };
+		30F76AAB2BA4C9E600FC3AFC /* TrackerViewControllerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewControllerHeader.swift; sourceTree = "<group>"; };
+		30F76AAD2BA4CA2D00FC3AFC /* NewHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
+		30F76AAF2BA4CA7000FC3AFC /* NewCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoryViewController.swift; sourceTree = "<group>"; };
+		30F76AB12BA4CA8900FC3AFC /* NewSheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheduleViewController.swift; sourceTree = "<group>"; };
+		30F76AB32BA4CAA800FC3AFC /* IrregularEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrregularEventViewController.swift; sourceTree = "<group>"; };
+		30F76AB52BA4CAC800FC3AFC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		30F76AB72BA4CADE00FC3AFC /* SheduleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,16 +86,16 @@
 		30F76A752B9F62A200FC3AFC /* Application_Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				30F76A912BA474B000FC3AFC /* Models */,
 				30F76A762B9F62A200FC3AFC /* AppDelegate.swift */,
 				30F76A782B9F62A200FC3AFC /* SceneDelegate.swift */,
 				30F76A7A2B9F62A200FC3AFC /* MainTabBarController.swift */,
+				30F76A912BA474B000FC3AFC /* Models */,
+				30F76AA52BA4C60100FC3AFC /* Tracker */,
+				30F76AA62BA4C60900FC3AFC /* Statistic */,
 				30F76A7F2B9F62A300FC3AFC /* Assets.xcassets */,
 				30F76A812B9F62A300FC3AFC /* LaunchScreen.storyboard */,
 				30F76A842B9F62A300FC3AFC /* Info.plist */,
 				30F76A902BA0630E00FC3AFC /* Extension */,
-				30F76A8A2BA05A7500FC3AFC /* TrackerViewController.swift */,
-				30F76A8C2BA05A9600FC3AFC /* StatisticViewController.swift */,
 			);
 			path = Application_Tracker;
 			sourceTree = "<group>";
@@ -99,6 +117,31 @@
 				30F76A982BA4758B00FC3AFC /* TrackerRecord.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		30F76AA52BA4C60100FC3AFC /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				30F76A8A2BA05A7500FC3AFC /* TrackerViewController.swift */,
+				30F76AA72BA4C85400FC3AFC /* CreatingTracker.swift */,
+				30F76AA92BA4C9D700FC3AFC /* TrackerViewControllerCell.swift */,
+				30F76AAB2BA4C9E600FC3AFC /* TrackerViewControllerHeader.swift */,
+				30F76AAD2BA4CA2D00FC3AFC /* NewHabitViewController.swift */,
+				30F76AAF2BA4CA7000FC3AFC /* NewCategoryViewController.swift */,
+				30F76AB12BA4CA8900FC3AFC /* NewSheduleViewController.swift */,
+				30F76AB32BA4CAA800FC3AFC /* IrregularEventViewController.swift */,
+				30F76AB52BA4CAC800FC3AFC /* TableViewCell.swift */,
+				30F76AB72BA4CADE00FC3AFC /* SheduleViewCell.swift */,
+			);
+			path = Tracker;
+			sourceTree = "<group>";
+		};
+		30F76AA62BA4C60900FC3AFC /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				30F76A8C2BA05A9600FC3AFC /* StatisticViewController.swift */,
+			);
+			path = Statistic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,10 +217,19 @@
 				30F76A7B2B9F62A200FC3AFC /* MainTabBarController.swift in Sources */,
 				30F76A8B2BA05A7500FC3AFC /* TrackerViewController.swift in Sources */,
 				30F76A9B2BA476A000FC3AFC /* WeekDay.swift in Sources */,
+				30F76AB62BA4CAC800FC3AFC /* TableViewCell.swift in Sources */,
 				30F76A952BA4756B00FC3AFC /* TrackerCategory.swift in Sources */,
 				30F76A772B9F62A200FC3AFC /* AppDelegate.swift in Sources */,
+				30F76AAC2BA4C9E600FC3AFC /* TrackerViewControllerHeader.swift in Sources */,
+				30F76AB42BA4CAA800FC3AFC /* IrregularEventViewController.swift in Sources */,
+				30F76AAA2BA4C9D700FC3AFC /* TrackerViewControllerCell.swift in Sources */,
+				30F76AB82BA4CADE00FC3AFC /* SheduleViewCell.swift in Sources */,
+				30F76AB02BA4CA7000FC3AFC /* NewCategoryViewController.swift in Sources */,
 				30F76A8F2BA0607000FC3AFC /* UIColors + Extension.swift in Sources */,
+				30F76AAE2BA4CA2D00FC3AFC /* NewHabitViewController.swift in Sources */,
 				30F76A992BA4758B00FC3AFC /* TrackerRecord.swift in Sources */,
+				30F76AA82BA4C85400FC3AFC /* CreatingTracker.swift in Sources */,
+				30F76AB22BA4CA8900FC3AFC /* NewSheduleViewController.swift in Sources */,
 				30F76A8D2BA05A9600FC3AFC /* StatisticViewController.swift in Sources */,
 				30F76A792B9F62A200FC3AFC /* SceneDelegate.swift in Sources */,
 				30F76A932BA474CA00FC3AFC /* Tracker.swift in Sources */,
