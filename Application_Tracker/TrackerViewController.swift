@@ -9,6 +9,10 @@ import UIKit
 
 class TrackerViewController: UIViewController {
     
+    var categories: [TrackerCategory] = []
+    var completedTrackers: [TrackerRecord] = []
+    var visibleTrackers: [TrackerCategory] = []
+    
     private lazy var emptyLabel: UILabel = {
         let label = UILabel()
         label.text = "Что будем отслеживать?"
