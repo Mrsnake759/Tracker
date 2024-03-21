@@ -1,0 +1,12 @@
+//
+//  TableViewCell.swift
+//  Application_Tracker
+//
+//  Created by artem on 13.03.2024.
+//
+
+import UIKit
+
+class TablewViewCell: UITableViewCell {
+    let identifier = "TableViewCell"
+}
