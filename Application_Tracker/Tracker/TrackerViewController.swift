@@ -69,8 +69,14 @@ class TrackerViewController: UIViewController, NewCategoryViewControllerDelegate
         let picker = UIDatePicker()
         picker.datePickerMode = .date
         picker.preferredDatePickerStyle = .compact
+        picker.locale = Locale(identifier: "ru_RU")
+        picker.calendar.firstWeekday = 2
+        picker.clipsToBounds = true
         picker.tintColor = .ypBlue
         picker.addTarget(self, action: #selector(datePickerSelected), for: .valueChanged)
+        picker.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        picker.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        picker.translatesAutoresizingMaskIntoConstraints = false
         return picker
     }()
     
@@ -104,7 +110,7 @@ class TrackerViewController: UIViewController, NewCategoryViewControllerDelegate
         
     @objc func datePickerSelected(_ sender: UIDatePicker) {
         selectedDate = sender.date
-        
+
         let components = datePicker.calendar.dateComponents([.day, .weekday], from: datePicker.date)
         guard let weekday = components.weekday else {
             return
@@ -112,7 +118,7 @@ class TrackerViewController: UIViewController, NewCategoryViewControllerDelegate
         var searchedCategories: [TrackerCategory] = []
         for category in categories {
             var searchedTrackers: [Tracker] = []
-            
+
             for tracker in category.tracker {
                 guard let day = Weekday(rawValue: weekday) else { return }
                 if tracker.shedule.contains(day) {
@@ -149,11 +155,21 @@ class TrackerViewController: UIViewController, NewCategoryViewControllerDelegate
     }
     
     private func settingNavBarItems() {
-        let plusButton = UIBarButtonItem(image: UIImage(named: "IconPlus"), style: .plain, target: self, action: #selector(addTracker))
-        plusButton.tintColor = .ypBlack
+        guard let navigationBar = navigationController?.navigationBar else { return }
+        navigationBar.topItem?.title = "Трекеры"
+        navigationBar.prefersLargeTitles = true
+        navigationBar.topItem?.largeTitleDisplayMode = .always
         
-        navigationItem.leftBarButtonItem = plusButton
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: datePicker)
+        let leftButton = UIBarButtonItem(
+            image: UIImage(named: "IconPlus"),
+            style: .plain,
+            target: self,
+            action: #selector(Self.addTracker))
+        leftButton.tintColor = .ypBlack
+        navigationItem.leftBarButtonItem = leftButton
+        
+        let rightButton = UIBarButtonItem(customView: datePicker)
+        navigationItem.rightBarButtonItem = rightButton
     }
     
     private func setupAllViews(){
@@ -348,8 +364,7 @@ extension TrackerViewController: CreatingTrackersDelegate {
     func createNewTracker(header: String, tracker: Tracker) {
         let newTracker = TrackerCategory(header: header, tracker: [tracker])
         
-        if let index = headersName.firstIndex(of: header) {
-            categories[index].tracker.append(tracker)
+        if headersName.firstIndex(of: header) != nil {
         } else {
             headersName.append(header)
             categories.append(newTracker)

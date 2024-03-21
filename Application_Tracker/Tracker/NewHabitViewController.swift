@@ -13,6 +13,7 @@ protocol NewHabitViewControllerDelegate: AnyObject {
 
 class NewHabitViewController: UIViewController, NewCategoryViewControllerDelegate {
     
+    var habits: Bool = true
     var category: String = ""
     var schedule: [Weekday] = []
     
@@ -51,6 +52,11 @@ class NewHabitViewController: UIViewController, NewCategoryViewControllerDelegat
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         tableView.backgroundColor = .ypBackground
         tableView.layer.cornerRadius = 16
+        if habits {
+            tableView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        } else {
+            tableView.heightAnchor.constraint(equalToConstant: 75).isActive = true
+        }
         tableView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView

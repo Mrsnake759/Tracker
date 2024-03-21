@@ -26,14 +26,11 @@ class NewScheduleViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private let weekDay: [String] = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+    private var weekDay: [String] = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
     
     let tableView: UITableView = {
        let table = UITableView()
         table.register(ScheduleTableViewCell.self, forCellReuseIdentifier: "ScheduleTableViewCell")
-        table.separatorStyle = .singleLine
-        table.separatorColor = .ypGray
-        table.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         table.backgroundColor = .ypWhite
         table.isScrollEnabled = false
         table.layer.masksToBounds = true
@@ -64,6 +61,9 @@ class NewScheduleViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         setupAllView()
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        tableView.separatorStyle = .singleLine
+        view.addSubview(tableView)
     }
     
     @objc
